@@ -1,0 +1,81 @@
+/* Styling for the body */
+body {
+  background: linear-gradient(90deg, grey, lightblue, rgb(46, 46, 151));
+}
+
+/* Styling for the h1 elements */
+h1 {
+  text-align: center;
+}
+
+/* Making the text bigger in the lists */
+ul, li {
+  list-style: none;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Styling the paragraphs */
+p {
+  font-size: large;
+  text-align: center;
+}
+
+/* Styling for the input and buttons container */
+.input-buttons-container {
+  display: flex; /* Use Flexbox to align input and buttons horizontally */
+  justify-content: center; /* Center horizontally in the container */
+  align-items: center; /* Center vertically in the container */
+  gap: 10px; /* Space between the input field and buttons */
+}
+
+/* Styling the input field */
+input {
+  width: 300px;
+  height: 75px;
+  border-radius: 25px;
+  font-size: 25px;
+}
+
+/* Styling the buttons */
+button { 
+  height: 100px;
+  width: 100px;
+  border-radius: 15px;
+  color: white; /* Ensures text is readable on colored buttons */
+  font-size: 20px; /* Adjust font size inside buttons */
+  cursor: pointer; /* Makes cursor a pointer to indicate clickability */
+}
+
+/* Specific button styles */
+#addBtn {
+  background-color: green;
+}
+
+#clearBtn {
+  background-color: red;
+}
+
+/* Styling the delete button */
+.delete-btn {
+  width: 50px;
+  height: 50px;
+  background-color: grey;
+  border: none; /* Optional: removes default border */
+  color: white; /* Ensures icon is visible on grey background */
+  font-size: 20px; /* Adjust font size for the icon */
+  cursor: pointer; /* Makes cursor a pointer */
+}
+
+/* Styling for completed tasks */
+.completed {
+  text-decoration: line-through;
+}
+
+/* Styling for the container */
+.container {
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 10px;
+  text-align: center;
+}
