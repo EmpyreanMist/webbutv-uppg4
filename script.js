@@ -50,7 +50,7 @@ function displayTasks() {
 
    //Making a trash icon that can be used to remove todos
     const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "🗑️";
+    deleteBtn.innerHTML = "🗑️";
     deleteBtn.classList.add("delete-btn");
 
     // Making another click event
