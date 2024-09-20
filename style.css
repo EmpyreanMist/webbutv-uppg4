@@ -23,10 +23,10 @@ p {
 
 /* Styling for the input and buttons container */
 .input-buttons-container {
-  display: flex; /* Use Flexbox to align input and buttons horizontally */
-  justify-content: center; /* Center horizontally in the container */
-  align-items: center; /* Center vertically in the container */
-  gap: 10px; /* Space between the input field and buttons */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
 }
 
 /* Styling the input field */
@@ -42,9 +42,9 @@ button {
   height: 100px;
   width: 100px;
   border-radius: 15px;
-  color: white; /* Ensures text is readable on colored buttons */
-  font-size: 20px; /* Adjust font size inside buttons */
-  cursor: pointer; /* Makes cursor a pointer to indicate clickability */
+  color: white; 
+  font-size: 20px; 
+  cursor: pointer; 
 }
 
 /* Specific button styles */
@@ -61,10 +61,10 @@ button {
   width: 50px;
   height: 50px;
   background-color: grey;
-  border: none; /* Optional: removes default border */
-  color: white; /* Ensures icon is visible on grey background */
-  font-size: 20px; /* Adjust font size for the icon */
-  cursor: pointer; /* Makes cursor a pointer */
+  border: none; 
+  color: white; 
+  font-size: 20px; 
+  cursor: pointer; 
 }
 
 /* Styling for completed tasks */
