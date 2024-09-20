@@ -84,14 +84,14 @@ function toggleTaskCompletion(index) {
 
 //Removing a todo
 function deleteTask(index) {
-  tasks.splice(index, 1); // Tar bort uppgiften från arrayen
-  displayTasks(); // Uppdaterar visningen
+  tasks.splice(index, 1); //Removing a task from the array
+  displayTasks(); // Refreshing
   updateTaskCount();
 }
 
 //Removing all the todos
 function clearAll() {
-  tasks = []; // Tömmer arrayen
-  ul.innerHTML = ""; // Tömmer HTML-listan
+  tasks = []; //Clearing the array
+  ul.innerHTML = ""; //Clearing the List
   updateTaskCount();
 }
