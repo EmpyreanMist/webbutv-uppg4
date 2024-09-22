@@ -13,6 +13,7 @@ ul, li {
   list-style: none;
   font-size: 30px;
   text-align: center;
+  cursor: pointer;
 }
 
 /* Styling the paragraphs */
@@ -39,6 +40,7 @@ input {
 
 /* Styling the buttons */
 button { 
+  margin-left: 10px;;
   height: 100px;
   width: 100px;
   border-radius: 15px;

@@ -2,8 +2,6 @@ const addBtn = document.querySelector("#addBtn"); // Declaring the addButton
 const clearBtn = document.querySelector("#clearBtn"); //Declaring the clearBtn
 const ul = document.querySelector("#ul"); //Declaring the unordered list
 const input = document.querySelector("#input"); //Declaring the input button
-
-
 let tasks = []; //Declaring an array to hold the tasks
 
 clearBtn.addEventListener("click", clearAll); //Calling clearAll function when clicking on clearBtn
@@ -68,18 +66,27 @@ function displayTasks() {
 
 function updateTaskCount() {
   let unfinishedTasksCount = 0;
+  let finishedTasksCount = 0;
   for(let i = 0; i < tasks.length; i++) {
-    if(!tasks[i].completed) {
+    if(tasks[i].completed) {
+      finishedTasksCount++;
+    } else {
       unfinishedTasksCount++;
     }
   }
-  taskCount.textContent = "Unfinished tasks: " + unfinishedTasksCount; 
+
+  const unfinishedCountEl = document.querySelector("#taskCount");
+  const finishedCountEl = document.querySelector("#finishedCount");
+
+  unfinishedCountEl.textContent = "Unfinished tasks: " + unfinishedTasksCount; 
+  finishedCountEl.textContent = "Finished tasks: " + finishedTasksCount;
 }
 
 //For marking completed
 function toggleTaskCompletion(index) {
   tasks[index].completed = !tasks[index].completed; 
   displayTasks(); 
+  updateTaskCount();
 }
 
 //Removing a todo
