@@ -106,7 +106,7 @@ function deleteTask(index) {
 
 //Removing all the todos
 function clearAll() {
-  tasks = []; //Clearing the array
+  tasks.length = 0; //Clearing the array
   ul.innerHTML = ""; //Clearing the List
   updateTaskCount();
 }
