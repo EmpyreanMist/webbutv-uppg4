@@ -1,6 +1,7 @@
 /* Styling for the body */
 body {
-  background: linear-gradient(90deg, grey, lightblue, rgb(46, 46, 151));
+  background: #433878;
+  color: #ffe1ff;
 }
 
 /* Styling for the h1 elements */
@@ -9,7 +10,8 @@ h1 {
 }
 
 /* Making the text bigger in the lists */
-ul, li {
+ul,
+li {
   list-style: none;
   font-size: 30px;
   text-align: center;
@@ -24,10 +26,11 @@ p {
 
 /* Styling for the input and buttons container */
 .input-buttons-container {
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  gap: 10px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #e4b1f0;
 }
 
 /* Styling the input field */
@@ -36,17 +39,18 @@ input {
   height: 75px;
   border-radius: 25px;
   font-size: 25px;
+  background-color: #e4b1f0;
 }
 
 /* Styling the buttons */
-button { 
-  margin-left: 10px;;
+button {
+  margin-left: 10px;
   height: 100px;
   width: 100px;
   border-radius: 15px;
-  color: white; 
-  font-size: 20px; 
-  cursor: pointer; 
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 /* Specific button styles */
@@ -63,10 +67,10 @@ button {
   width: 50px;
   height: 50px;
   background-color: grey;
-  border: none; 
-  color: white; 
-  font-size: 20px; 
-  cursor: pointer; 
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 /* Styling for completed tasks */
@@ -80,4 +84,9 @@ button {
   max-width: 500px;
   padding: 10px;
   text-align: center;
+  background-color: #7e60bf;
+}
+
+.text {
+  background-color: #433878;
 }
