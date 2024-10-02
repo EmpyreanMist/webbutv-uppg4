@@ -8,6 +8,12 @@ const tasks = []; //Declaring an array to hold the tasks
 clearBtn.addEventListener("click", clearAll); //Calling clearAll function when clicking on clearBtn
 addBtn.addEventListener("click", addTaskToArray); //Calling addTaskToArray function when clicking
 
+input.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    addTaskToArray();
+  }
+});
+
 function addTaskToArray() {
   const task = input.value; //Holds the text in the input
 
