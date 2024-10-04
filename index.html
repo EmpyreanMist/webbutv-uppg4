@@ -7,42 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 
-    <style>
+<!--     <style>
       #ball {
         width: 100px;
         height: 100px;
         background-color: rgb(255, 0, 0);
-        border-radius: 50px;
-        transition: background-color 2s; /* Takes 2 second to background color */
+        border-radius: 50%;
+        animation-name: color-shift;
+        animation-duration: 5s;
       }
 
-      #ball:hover {
-        background-color: rgb(0, 128, 0);
-      }
+      @keyframes color-shift {
+        0% {
+          background-color: rgb(255, 0, 0);
+        }
+        50% {
+          background-color: rgb(0, 255, 0);
+        }
+        100% {
+          background-color: rgb(0, 0, 255);
+        }
+      } -->
     </style>
   </head>
 
   <body>
-    <div class="text">
-      <h1 id="header">Christians Todo List!</h1>
-      <p id="taskCount">Unfinished tasks: 0</p>
-      <p id="finishedCount">Finished task: 0</p>
-    </div>
 
     <div class="container">
-      <div class="input-buttons-container">
-        <input type="text" id="input" placeholder="Do the dishes..." />
-        <button type="button" id="addBtn">Add task</button>
-        <button type="button" id="clearBtn">Clear all</button>
-      </div>
+
+        <h1 id="header">My ToDo</h1>
+<!--    <p id="taskCount">Unfinished tasks: 0</p> --> 
+        <p id="finishedCount">0 completed</p>
+        <div class="input-buttons-container">
+          <input type="text" id="input" />
+          <button type="button" id="addBtn">OK</button>
+        </div>
+        <p id="empty-input-text">Input must not be empty</p>
+<!--    <button type="button" id="clearBtn">Clear all</button> -->
+        <ul id="ul"></ul>
+
     </div>
-
-    <div id="ball"></div>
-
-    <div class="listedItems">
-      <ul id="ul"></ul>
-    </div>
-
     <script src="script.js"></script>
   </body>
 </html>
