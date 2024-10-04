@@ -3,9 +3,11 @@ const clearBtn = document.querySelector("#clearBtn"); //Declaring the clearBtn
 const ul = document.querySelector("#ul"); //Declaring the unordered list
 const input = document.querySelector("#input"); //Declaring the input button
 const header = document.querySelector("#header");
+const emptyInput =
+  document.querySelector("#empty-input-text"); /*Paragraph when empty*/
 const tasks = []; //Declaring an array to hold the tasks
 
-clearBtn.addEventListener("click", clearAll); //Calling clearAll function when clicking on clearBtn
+/* clearBtn.addEventListener("click", clearAll); //Calling clearAll function when clicking on clearBtn*/
 addBtn.addEventListener("click", addTaskToArray); //Calling addTaskToArray function when clicking
 
 input.addEventListener("keydown", function (event) {
@@ -23,13 +25,14 @@ function addTaskToArray() {
       name: task,
       completed: false,
     };
-    header.innerHTML = "Christians Todo List!";
+    /*  header.innerHTML = "Christians Todo List!"; */
     tasks.push(newTask);
     input.value = ""; //Resetting the text in the input
     displayTasks();
     updateTaskCount(); //Function for updating total tasks
   } else {
-    header.innerHTML = "Don't be lazy!";
+    /*header.innerHTML = "Don't be lazy!"; */
+    emptyInput.style.opacity = "100%";
   }
 }
 
@@ -92,8 +95,8 @@ function updateTaskCount() {
   const unfinishedCountEl = document.querySelector("#taskCount");
   const finishedCountEl = document.querySelector("#finishedCount");
 
-  unfinishedCountEl.textContent = "Unfinished tasks: " + unfinishedTasksCount;
-  finishedCountEl.textContent = "Finished tasks: " + finishedTasksCount;
+  /*   unfinishedCountEl.textContent = "Unfinished tasks: " + unfinishedTasksCount;*/
+  finishedCountEl.textContent = finishedTasksCount + " completed";
 }
 
 //For marking completed
