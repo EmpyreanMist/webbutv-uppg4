@@ -1,84 +1,159 @@
 /* Styling for the body */
 body {
-  background: url(./todo-background.jpg);
+  background-image: linear-gradient(
+    to bottom,
+    #febfbf,
+    #feb6b6,
+    #ffadad,
+    #fea3a3,
+    #fe9a9a,
+    #ea8687,
+    #cb6f70
+  );
+  background-repeat: no-repeat;
 }
 
-/* Styling for the h1 elements */
-h1 {
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+/* Styling for the container */
+.container {
+  margin: 18px auto;
+  max-width: 717px;
+  padding: 10px;
   text-align: center;
+  background-color: white;
+  min-height: 291px;
+
+  animation-name: up-down-up;
+  animation-duration: 0.4s; /* How long the animation should last */
+  animation-delay: 0.01s;
+  animation-fill-mode: forwards; /* Animations stays on the last keyframe */
+  opacity: 0.1;
+}
+
+@keyframes up-down-up {
+  0% {
+    opacity: 0.4;
+    margin-top: -150px;
+  }
+  75% {
+    opacity: 0.6;
+    margin-top: 150px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Styling for the h1 element */
+#header {
+  opacity: 0;
+  animation: fade-in 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  text-align: center;
+  font-size: 75px;
+  font-weight: 900;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/* Styling for the completed paragraph */
+#finishedCount {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+  font-family: sans-serif;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Styling the input field */
+#input {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+  height: 45px;
+  width: 345px;
+  border: solid black 3px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 25px;
+  outline: none;
+  margin: 0;
+  padding: 0 0 0 10px;
+  vertical-align: middle; /* Aligns the button with the input */
+}
+
+/* Styling for the addBTN with text: "OK" */
+#addBtn {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+  height: 51px;
+  width: 75px;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 0 5px;
+  padding: 0;
+  vertical-align: middle; /* Aligns the button with the input */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Styling for when the input is focused */
+#input:focus {
+  border-color: blue;
+}
+
+/* Styling of the text when someone tried to enter an empty string */
+#empty-input-text {
+  opacity: 0%;
+  color: red;
+  font-style: italic;
 }
 
 /* Making the text bigger in the lists */
 ul,
 li {
+  font-family: sans-serif;
+  font-weight: bold;
   list-style: none;
   font-size: 30px;
   text-align: center;
   cursor: pointer;
 }
 
-/* Styling the paragraphs */
-p {
-  font-size: large;
-  text-align: center;
-}
-
-/* Styling for the input and buttons container */
-.input-buttons-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Styling the input field */
-input {
-  width: 300px;
-  height: 75px;
-  border-radius: 25px;
-  font-size: 25px;
-}
-
-/* Styling the buttons */
-button {
-  margin-left: 10px;
-  height: 85px;
-  width: 100px;
-  border-radius: 15px;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* Specific button styles */
-#addBtn {
-  background-color: green;
-}
-
-#clearBtn {
-  background-color: red;
-}
-
 /* Styling the delete button */
 .delete-btn {
   width: 50px;
   height: 50px;
-  background-color: red;
   border: none;
-  color: white;
+  background-color: white;
   font-size: 20px;
   cursor: pointer;
 }
 
-/* Styling for completed tasks */
+/* Styling for when a task is marked as completed */
 .completed {
   text-decoration: line-through;
-}
-
-/* Styling for the container */
-.container {
-  margin: 20px auto;
-  max-width: 500px;
-  padding: 10px;
-  text-align: center;
+  opacity: 50%;
 }
