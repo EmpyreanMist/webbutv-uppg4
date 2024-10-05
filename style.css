@@ -3,8 +3,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  min-height: 100vh;
 
-  height: 100vh;
+  height: 100%;
   /*   background-image: linear-gradient(
     to bottom,
     #febfbf,
@@ -15,8 +16,10 @@ body {
     #ea8687,
     #cb6f70
   ); */
-  background: linear-gradient(to bottom, #f8c7cc, #f57c73);
+  /*   background: linear-gradient(to bottom, #f8c7cc, #f57c73); */
+  background: linear-gradient(to bottom, #fec5c4, #ff7c7c);
   background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
 }
 
@@ -250,4 +253,48 @@ li:hover {
 .input-buttons-container {
   padding-bottom: 8px;
   color: #7c7c7c;
+}
+
+/* Changing some sizes for smaller screens */
+@media only screen and (max-width: 844px) {
+  body {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .container {
+    width: 70vw;
+    max-width: 600px;
+    padding: 15px 10px;
+  }
+
+  .input-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #input {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  #addBtn {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+
+/*Changing for even smaller screens */
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 90vw;
+    padding: 10px 5px;
+  }
+
+  #input,
+  #addBtn {
+    font-size: 1rem;
+  }
 }
