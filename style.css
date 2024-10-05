@@ -3,8 +3,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+
   height: 100vh;
-  background-image: linear-gradient(
+  /*   background-image: linear-gradient(
     to bottom,
     #febfbf,
     #feb6b6,
@@ -13,15 +14,18 @@ body {
     #fe9a9a,
     #ea8687,
     #cb6f70
-  );
+  ); */
+  background: linear-gradient(to bottom, #f8c7cc, #f57c73);
   background-repeat: no-repeat;
   margin: 0;
 }
 
+/* Styling for ALL elements */
 * {
   box-sizing: border-box;
 }
 
+/* Html and Body styling */
 html,
 body {
   height: 100%;
@@ -31,7 +35,7 @@ body {
 
 /* Styling for the container */
 .container {
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px;
   margin: 17px auto 0;
   min-width: 737px;
   padding: 30px 20px;
@@ -45,6 +49,7 @@ body {
   opacity: 0.1;
 }
 
+/* Animation keyframes that goes up and down when entering site */
 @keyframes up-down-up {
   0% {
     opacity: 0.4;
@@ -62,31 +67,31 @@ body {
 /* Styling for the h1 element */
 #header {
   opacity: 0;
-
   margin-top: -15px;
-  padding-bottom: 10px;
-  font-size: 68px;
-  font-weight: 900;
-  line-height: 1.5;
+  margin-bottom: 5px;
+  font-size: 81px;
+  font-weight: 600;
+  line-height: 1.2;
   animation: fade-in 1s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
-  letter-spacing: 0.5px;
-  font-family: "Playfair Display", serif;
+  letter-spacing: -5px;
+  /* font-family: "Playfair Display", serif; */
+  font-family: "Georgia", serif;
   font-style: normal;
 }
 
 /* Styling for the completed paragraph */
 #finishedCount {
-  opacity: 0;
   animation-name: fade-in;
   animation-delay: 0.6s;
   animation-fill-mode: forwards;
-  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 10px;
   padding-bottom: 30px;
   font-family: sans-serif;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 /* Styling the input field */
@@ -95,8 +100,8 @@ body {
   animation-name: fade-in;
   animation-delay: 0.7s;
   animation-fill-mode: forwards;
-  height: 44px;
-  width: 380px;
+  height: 49px;
+  width: 344px;
   border: solid black 1px;
   border-radius: 5px;
   font-weight: bold;
@@ -104,7 +109,7 @@ body {
   outline: none;
   margin-right: 10px;
   padding-left: 10px;
-  vertical-align: middle; /* Aligns the button with the input  */
+  vertical-align: middle;
 }
 
 /* Styling for the addBTN with text: "OK" */
@@ -116,20 +121,22 @@ body {
   animation-fill-mode: forwards;
   border: 1px solid black;
   height: 49px;
-  width: 90px;
+  width: 77px;
   border-radius: 5px;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 600;
   margin-left: 10px;
   padding: 0;
   margin: 0;
-  vertical-align: middle; /* Aligns the button with the input  */
+  vertical-align: middle;
 }
 
+/* Hover effect on the button to add responsivnes */
 #addBtn:hover {
   background-color: #e0e0e0;
 }
 
+/* Animation to go from invisible to visible */
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -150,13 +157,14 @@ body {
   display: none;
   opacity: 0;
   margin-top: 0;
+  margin-right: 38px;
   padding-bottom: 20px;
-  height: 25px;
+  height: 27px;
   color: red;
   font-family: Helvetica, sans-serif;
   font-style: italic;
-  font-weight: bold;
-  font-size: x-large;
+  font-weight: 600;
+  font-size: 20px;
   text-indent: 5px;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -181,12 +189,12 @@ body {
   }
 }
 
-/* Making the text bigger in the lists */
 ul {
   padding: 0;
   margin: 0;
 }
 
+/* Styling for the added tasks text */
 li {
   font-family: sans-serif;
   font-weight: bold;
@@ -197,27 +205,31 @@ li {
   margin-bottom: 15px;
 }
 
+/* Hover effect on the listed tasks */
 li:hover {
   text-decoration: line-through;
 }
 
+/* Animation effect class for fading in and up */
 .new-item {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.5s ease forwards;
 }
 
+/* FadeinUp animation */
 @keyframes fadeInUp {
   0% {
-    opacity: 0; /* Start with lower opacity */
+    opacity: 0;
     transform: translateY(20px);
   }
   100% {
-    opacity: 1; /* End with full opacity */
+    opacity: 1;
     transform: translateY(0);
   }
 }
 
+/* Class style for when list task is pressed */
 .completed {
   text-decoration: line-through;
   color: #7c7c7c;
@@ -233,6 +245,7 @@ li:hover {
   cursor: pointer;
 }
 
+/* Div container with the input and button */
 .input-buttons-container {
   padding-bottom: 8px;
   color: #7c7c7c;
