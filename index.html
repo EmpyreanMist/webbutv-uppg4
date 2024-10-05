@@ -6,46 +6,26 @@
     <title>Christians Todo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-
-<!--     <style>
-      #ball {
-        width: 100px;
-        height: 100px;
-        background-color: rgb(255, 0, 0);
-        border-radius: 50%;
-        animation-name: color-shift;
-        animation-duration: 5s;
-      }
-
-      @keyframes color-shift {
-        0% {
-          background-color: rgb(255, 0, 0);
-        }
-        50% {
-          background-color: rgb(0, 255, 0);
-        }
-        100% {
-          background-color: rgb(0, 0, 255);
-        }
-      } -->
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-
     <div class="container">
-
-        <h1 id="header">My ToDo</h1>
-<!--    <p id="taskCount">Unfinished tasks: 0</p> --> 
-        <p id="finishedCount">0 completed</p>
-        <div class="input-buttons-container">
-          <input type="text" id="input" />
-          <button type="button" id="addBtn">OK</button>
-        </div>
-        <p id="empty-input-text">Input must not be empty</p>
-<!--    <button type="button" id="clearBtn">Clear all</button> -->
-        <ul id="ul"></ul>
-
+      <h1 id="header">My ToDo</h1>
+      <!--    <p id="taskCount">Unfinished tasks: 0</p> -->
+      <p id="finishedCount">0 completed</p>
+      <div class="input-buttons-container">
+        <input type="text" id="input" />
+        <button type="button" id="addBtn">OK</button>
+      </div>
+      <p id="empty-input-text">Input must not be empty</p>
+      <!--    <button type="button" id="clearBtn">Clear all</button> -->
+      <ul id="ul"></ul>
     </div>
     <script src="script.js"></script>
   </body>

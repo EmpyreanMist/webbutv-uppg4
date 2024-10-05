@@ -1,5 +1,9 @@
 /* Styling for the body */
 body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
   background-image: linear-gradient(
     to bottom,
     #febfbf,
@@ -11,27 +15,33 @@ body {
     #cb6f70
   );
   background-repeat: no-repeat;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html,
 body {
-  min-height: 100%;
+  height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 /* Styling for the container */
 .container {
-  margin: 18px auto;
-  max-width: 717px;
-  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  margin: 17px auto 0;
+  min-width: 737px;
+  padding: 30px 20px;
   text-align: center;
   background-color: white;
-  min-height: 291px;
-
   animation-name: up-down-up;
   animation-duration: 0.4s; /* How long the animation should last */
   animation-delay: 0.01s;
   animation-fill-mode: forwards; /* Animations stays on the last keyframe */
+  min-height: 313px;
   opacity: 0.1;
 }
 
@@ -42,7 +52,7 @@ body {
   }
   75% {
     opacity: 0.6;
-    margin-top: 150px;
+    margin-top: 120px;
   }
   100% {
     opacity: 1;
@@ -52,61 +62,72 @@ body {
 /* Styling for the h1 element */
 #header {
   opacity: 0;
-  animation: fade-in 1s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-  text-align: center;
-  font-size: 75px;
+
+  margin-top: -15px;
+  padding-bottom: 10px;
+  font-size: 68px;
   font-weight: 900;
-  margin-top: 10px;
-  margin-bottom: 15px;
+  line-height: 1.5;
+  animation: fade-in 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  letter-spacing: 0.5px;
+  font-family: "Playfair Display", serif;
+  font-style: normal;
 }
 
 /* Styling for the completed paragraph */
 #finishedCount {
   opacity: 0;
   animation-name: fade-in;
-  animation-delay: 1.2s;
+  animation-delay: 0.6s;
   animation-fill-mode: forwards;
+  margin: 0;
+  padding-bottom: 30px;
   font-family: sans-serif;
-  margin-top: 15px;
-  margin-bottom: 30px;
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 22px;
 }
 
 /* Styling the input field */
 #input {
   opacity: 0;
   animation-name: fade-in;
-  animation-delay: 1.4s;
+  animation-delay: 0.7s;
   animation-fill-mode: forwards;
-  height: 45px;
-  width: 345px;
-  border: solid black 3px;
+  height: 44px;
+  width: 380px;
+  border: solid black 1px;
   border-radius: 5px;
   font-weight: bold;
   font-size: 25px;
   outline: none;
-  margin: 0;
-  padding: 0 0 0 10px;
-  vertical-align: middle; /* Aligns the button with the input */
+  margin-right: 10px;
+  padding-left: 10px;
+  vertical-align: middle; /* Aligns the button with the input  */
 }
 
 /* Styling for the addBTN with text: "OK" */
 #addBtn {
   opacity: 0;
   animation-name: fade-in;
-  animation-delay: 1.4s;
+  animation-delay: 0.7s;
+  background-color: #ededed;
   animation-fill-mode: forwards;
-  height: 51px;
-  width: 75px;
+  border: 1px solid black;
+  height: 49px;
+  width: 90px;
   border-radius: 5px;
   font-size: 30px;
   font-weight: bold;
-  margin: 0 0 0 5px;
+  margin-left: 10px;
   padding: 0;
-  vertical-align: middle; /* Aligns the button with the input */
+  margin: 0;
+  vertical-align: middle; /* Aligns the button with the input  */
+}
+
+#addBtn:hover {
+  background-color: #e0e0e0;
 }
 
 @keyframes fade-in {
@@ -121,25 +142,85 @@ body {
 
 /* Styling for when the input is focused */
 #input:focus {
-  border-color: blue;
+  border: solid 2px blue;
 }
 
 /* Styling of the text when someone tried to enter an empty string */
 #empty-input-text {
-  opacity: 0%;
+  display: none;
+  opacity: 0;
+  margin-top: 0;
+  padding-bottom: 20px;
+  height: 25px;
   color: red;
+  font-family: Helvetica, sans-serif;
   font-style: italic;
+  font-weight: bold;
+  font-size: x-large;
+  text-indent: 5px;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+/* The keyframes for blinking 3 times */
+@keyframes blink-3 {
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Making the text bigger in the lists */
-ul,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 li {
   font-family: sans-serif;
   font-weight: bold;
   list-style: none;
-  font-size: 30px;
+  font-size: 36px;
   text-align: center;
   cursor: pointer;
+  margin-bottom: 15px;
+}
+
+li:hover {
+  text-decoration: line-through;
+}
+
+.new-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0; /* Start with lower opacity */
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1; /* End with full opacity */
+    transform: translateY(0);
+  }
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #7c7c7c;
 }
 
 /* Styling the delete button */
@@ -152,8 +233,7 @@ li {
   cursor: pointer;
 }
 
-/* Styling for when a task is marked as completed */
-.completed {
-  text-decoration: line-through;
-  opacity: 50%;
+.input-buttons-container {
+  padding-bottom: 8px;
+  color: #7c7c7c;
 }
