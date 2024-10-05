@@ -1,4 +1,4 @@
-# webbutv-uppg4
+
 # Todo List Project
 
 This project is a recreation of a Todo List application based on a video example provided as part of a task during my Fullstack System Development education at Lernia.
