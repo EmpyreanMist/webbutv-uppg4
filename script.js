@@ -43,7 +43,7 @@ function displayTasks() {
     const li = document.createElement("li");
     li.textContent = task.name;
 
-    // Add animation class only if the task is new
+    // Add animation class only if the task is new and remove it after effect
     if (task.isNew) {
       li.classList.add("new-item");
       tasks[i].isNew = false;
@@ -102,7 +102,16 @@ function updateTaskCount() {
 // For marking completed
 function toggleTaskCompletion(index) {
   tasks[index].completed = !tasks[index].completed;
-  displayTasks();
+
+  const listItems = document.querySelectorAll("li");
+  const listItem = listItems[index];
+
+  if (tasks[index].completed) {
+    listItem.classList.add("completed");
+  } else {
+    listItem.classList.remove("completed");
+  }
+
   updateTaskCount();
 }
 
