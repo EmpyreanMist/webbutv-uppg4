@@ -10,7 +10,7 @@ The goal of this project was to practice and demonstrate skills in front-end dev
 
 - Add and delete tasks.
 - Mark tasks as completed.
-- Responsiv for smaller screens
+- Responsive for smaller screens
 
 ## Technologies Used
 
