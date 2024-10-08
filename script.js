@@ -123,8 +123,9 @@ function deleteTask(index) {
 }
 
 // Clearing all tasks (if required)
-function clearAll() {
+/* function clearAll() {
   tasks.length = 0; // Clearing the array
   ul.innerHTML = ""; // Clearing the list
   updateTaskCount();
 }
+ */
