@@ -1,4 +1,4 @@
-const addBtn = document.querySelector("#addBtn"); // Declaring the addButton
+const addBtn = document.querySelector(".addBtn"); // Declaring the addButton
 const ul = document.querySelector("#ul"); // Declaring the unordered list
 const input = document.querySelector("#input"); // Declaring the input button
 const emptyInput = document.querySelector("#empty-input-text"); // Paragraph when empty

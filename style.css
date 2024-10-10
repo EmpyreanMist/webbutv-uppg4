@@ -4,19 +4,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
-
   height: 100%;
-  /*   background-image: linear-gradient(
-    to bottom,
-    #febfbf,
-    #feb6b6,
-    #ffadad,
-    #fea3a3,
-    #fe9a9a,
-    #ea8687,
-    #cb6f70
-  ); */
-  /*   background: linear-gradient(to bottom, #f8c7cc, #f57c73); */
   background: linear-gradient(to bottom, #fec5c4, #ff7c7c);
   background-repeat: no-repeat;
   background-size: cover;
@@ -75,14 +63,9 @@ body {
   font-size: 75px;
   padding-top: 8px;
   letter-spacing: 1px;
-
   animation: fade-in 1s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
-
-  /* font-family: "Playfair Display", serif; */
-  /*   font-family: "Georgia", serif;
-  font-style: normal; */
 }
 
 /* Styling for the completed paragraph */
@@ -259,6 +242,12 @@ li:hover {
   background-color: white;
   font-size: 20px;
   cursor: pointer;
+  filter: brightness(110%); /* Make to animation */
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  filter: brightness(100%);
 }
 
 /* Div container with the input and button */
